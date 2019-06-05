@@ -14,9 +14,9 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-            <skip>false</skip>
+            <skip>true</skip>
         </configuration>
-    </plugin>
+    	</plugin>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
