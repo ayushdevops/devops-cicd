@@ -1,7 +1,7 @@
 node {
    def mvnHome
    stage('Prepare') {
-      git url: 'git@github.com/ayushdevops/devops-cicd.git', branch: 'master'
+      git url: 'git@github.com:ayushdevops/devops-cicd.git', branch: 'master'
       mvnHome = tool 'maven'
    }
    stage('Build') {
@@ -33,7 +33,7 @@ node {
        sh 'curl -u admin:redhat@123 -T target/**.war "http://54.234.50.26:8080/manager/text/deploy?path=/devops&update=true"'
    }
    stage("Smoke Test"){
-       sh "curl --retry-delay 10 --retry 5 http://54.234.50.26:8080/devops"
+       sh "curl --retry-delay 10 --retry 5 http://54.234.50.26:8080/devops-cicd"
    } 
    stage('Artifacts') {
       if (isUnix()) {
